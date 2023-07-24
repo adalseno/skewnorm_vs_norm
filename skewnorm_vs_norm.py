@@ -12,7 +12,7 @@ with col1:
     st.header("Select parameters for the distribution")
     alpha = st.number_input('alpha')
     mu = st.number_input('mu')
-    sigma = st.number_input('sigma')
+    sigma = st.number_input('sigma', value=1)
 
 with col2:
     # plot area

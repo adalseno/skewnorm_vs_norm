@@ -21,5 +21,6 @@ with col2:
     x= np.linspace(ss.skewnorm.ppf(0.01, alpha),ss.skewnorm.ppf(0.99, alpha), 100)
     ax.plot(x, ss.skewnorm.pdf(x, alpha, mu, sigma),'r-', lw=5, alpha=0.6, label='skewnorm')
     ax.plot(x, ss.norm.pdf(x, mu, sigma),'k-', lw=5, alpha=0.6, label='norm')
+    plt.legend()
     st.pyplot(fig)
     

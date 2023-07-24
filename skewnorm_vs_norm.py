@@ -18,11 +18,8 @@ with col2:
     # plot area
     st.header("PDF of skew-normal vs normal")
     fig, ax = plt.subplots(1, 1)
-    x= np.linspace(st.skewnorm.ppf(0.01, alpha),
-                    st.skewnorm.ppf(0.99, a), 100)
-    ax.plot(x, st.skewnorm.pdf(x, alpha, mu, sigma),
-           'r-', lw=5, alpha=0.6, label='skewnorm pdf')
-    ax.plot(x, st.norm.pdf(x, mu, sigma),
-           'k-', lw=5, alpha=0.6, label='norm pdf')
+    x= np.linspace(st.skewnorm.ppf(0.01, alpha),st.skewnorm.ppf(0.99, a), 100)
+    ax.plot(x, st.skewnorm.pdf(x, alpha, mu, sigma),'r-', lw=5, alpha=0.6, label='skewnorm pdf')
+    ax.plot(x, st.norm.pdf(x, mu, sigma),'k-', lw=5, alpha=0.6, label='norm pdf')
     st.pyplot(fig)
     

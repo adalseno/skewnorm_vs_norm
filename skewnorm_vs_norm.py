@@ -19,8 +19,8 @@ with col2:
     st.header("PDF of skew-normal vs normal")
     fig, ax = plt.subplots(1, 1)
     x= np.linspace(ss.skewnorm.ppf(0.01, alpha, mu, sigma),ss.skewnorm.ppf(0.99, alpha, mu, sigma), 100)
-    ax.plot(x, ss.skewnorm.pdf(x, alpha, mu, sigma),'r-', lw=5, alpha=0.6, label='skewnorm')
-    ax.plot(x, ss.norm.pdf(x, mu, sigma),'k-', lw=5, alpha=0.6, label='norm')
+    ax.plot(x, ss.skewnorm.pdf(x, alpha, loc=mu, scale=sigma),'r-', lw=5, alpha=0.6, label='skewnorm')
+    ax.plot(x, ss.norm.pdf(x, loc=mu, scale=sigma),'k-', lw=5, alpha=0.6, label='norm')
     plt.legend()
     st.pyplot(fig)
     

@@ -10,9 +10,9 @@ col1, col2 = st.columns(2)
 with col1:
     # Input area
     st.header("Select parameters for the distribution")
-    alpha = st.number_input('alpha', value=1)
-    mu = st.number_input('mu')
-    sigma = st.number_input('sigma', value=1)
+    alpha = st.number_input('alpha', value=1.0, step=0.05)
+    mu = st.number_input('mu', value=0.0, step=0.05)
+    sigma = st.number_input('sigma', value=1.0, step=0.05)
 
 with col2:
     # plot area
